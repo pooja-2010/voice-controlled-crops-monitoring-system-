@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Crop Monitoring</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🌱 Smart Crop Monitoring</h1>
+
+    <div class="controls">
+        <button onclick="startListening()">🎤 Speak</button>
+        <button onclick="startMonitoring()">▶ Start</button>
+        <button onclick="stopMonitoring()">🛑 Stop</button>
+    </div>
+
+    <div class="cards">
+        <div class="card" id="tempCard">🌡️ Temp: <span id="temp">--</span> °C</div>
+        <div class="card" id="moistureCard">💧 Moisture: <span id="moisture">--</span> %</div>
+        <div class="card" id="humidityCard">💨 Humidity: <span id="humidity">--</span> %</div>
+        <div class="card">☀️ Light: <span id="light">--</span> lux</div>
+        <div class="card">🌧️ Rain: <span id="rain">--</span></div>
+    </div>
+
+    <p id="output">System Ready...</p>
+<button onclick="showData()">Show Sensor Data</button>
+<div id="dataDisplay"></div>
+
+    <canvas id="myChart"></canvas>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
